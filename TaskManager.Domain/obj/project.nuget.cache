@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "1jC+d1BgTtY=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Matíasputa\\source\\repos\\SportCatalogAPI\\TaskManager.Domain\\TaskManager.Domain.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Matíasputa\\.nuget\\packages\\bcrypt.net-next\\4.1.0\\bcrypt.net-next.4.1.0.nupkg.sha512"
+  ],
+  "logs": []
+}
