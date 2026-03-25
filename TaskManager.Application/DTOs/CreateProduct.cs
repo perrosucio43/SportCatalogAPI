@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc.ModelBinding;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,6 +18,7 @@ namespace TaskManager.Application.DTOs
 
         public IFormFile Image { get; set; }
         public Guid CategoryId { get; set; }
-        public string ImageUrl { get; set; }
+        [BindNever]
+        public string? ImageUrl { get; set; }
     }
 }
