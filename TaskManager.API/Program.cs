@@ -72,9 +72,15 @@ builder.Services.AddSwaggerGen(options =>
     });
 });
 var jwtSettings = builder.Configuration.GetSection("Jwt");
+
 var jwtKey = Environment.GetEnvironmentVariable("JWT_KEY") ?? jwtSettings["Key"];
 var jwtIssuer = Environment.GetEnvironmentVariable("JWT_ISSUER") ?? jwtSettings["Issuer"];
 var jwtAudience = Environment.GetEnvironmentVariable("JWT_AUDIENCE") ?? jwtSettings["Audience"];
+
+if (string.IsNullOrEmpty(jwtKey))
+{
+    throw new Exception("JWT_KEY no configurado");
+}
 builder.Services.AddAuthentication(options =>
 {
     options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
