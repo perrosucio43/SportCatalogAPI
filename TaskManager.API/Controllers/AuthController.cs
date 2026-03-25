@@ -27,7 +27,7 @@ namespace TaskManager.API.Controllers
 
         [HttpPost("login")]
 
-        public async Task<ActionResult> AuthenticateAsync([FromBody ]LoginDto dto)
+        public async Task<ActionResult> AuthenticateAsync([FromBody]LoginDto dto)
         {
             var user = await _userService.GetByEmailAsync(dto);
 

@@ -25,6 +25,7 @@ builder.Services.AddScoped<ICategoryServices, CategoryService>();
 builder.Services.AddScoped<IUserService, UserServices>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<JwtServices>();
+builder.Services.AddScoped<CloudinaryServices>();
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowAll",

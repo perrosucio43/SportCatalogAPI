@@ -14,10 +14,11 @@ namespace TaskManager.API.Controllers
     public class ProductsController : ControllerBase
     {
         private readonly IProductServices _productService;
-
-        public ProductsController(IProductServices productService)
+        private readonly CloudinaryServices _cloudinaryServices;
+        public ProductsController(IProductServices productService, CloudinaryServices cloudinaryServices)
         {
             _productService = productService;
+            _cloudinaryServices = cloudinaryServices;
         }
 
         [HttpGet]
@@ -34,6 +35,11 @@ namespace TaskManager.API.Controllers
         [HttpPost]
         public async Task<ActionResult<ProductResponseDTO>> CreateProduct([FromForm]CreateProductDTO dto)
         {
+
+            if (dto.Image != null) {
+                dto.ImageUrl = await _cloudinaryServices.UploadImageAsync(dto.Image);
+
+            }
             var product = await _productService.CreateAsync(dto);
 
             return CreatedAtAction(

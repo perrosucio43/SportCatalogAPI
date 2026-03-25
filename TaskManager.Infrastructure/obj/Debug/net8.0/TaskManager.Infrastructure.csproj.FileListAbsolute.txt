@@ -36,3 +36,4 @@ C:\Users\Matíasputa\source\repos\SportCatalogAPI\TaskManager.Infrastructure\bin
 C:\Users\Matíasputa\source\repos\SportCatalogAPI\TaskManager.Infrastructure\obj\Debug\net8.0\TaskMana.DD0CDC6B.Up2Date
 C:\Users\Matíasputa\source\repos\SportCatalogAPI\TaskManager.Infrastructure\obj\Debug\net8.0\TaskManager.Infrastructure.genruntimeconfig.cache
 C:\Users\Matíasputa\source\repos\SportCatalogAPI\TaskManager.Infrastructure\obj\Debug\net8.0\ref\TaskManager.Infrastructure.dll
+C:\Users\Matíasputa\source\repos\SportCatalogAPI\TaskManager.Infrastructure\obj\Debug\net8.0\TaskManager.Infrastructure.sourcelink.json

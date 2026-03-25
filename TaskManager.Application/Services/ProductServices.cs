@@ -38,23 +38,9 @@ namespace TaskManager.Application.Services
 
         public async Task<ProductResponseDTO> CreateAsync(CreateProductDTO dto)
         {
-            string imageUrl = null;
+            
 
-            if (dto.Image != null)
-            {
-                var fileName = Guid.NewGuid() + Path.GetExtension(dto.Image.FileName);
-
-                var path = Path.Combine("wwwroot/images", fileName);
-
-                using (var stream = new FileStream(path, FileMode.Create))
-                {
-                    await dto.Image.CopyToAsync(stream);
-                }
-
-                imageUrl = "/images/" + fileName;
-            }
-
-            var product = new Product(dto.Name, dto.Description, dto.Price, imageUrl, dto.CategoryId);
+            var product = new Product(dto.Name, dto.Description, dto.Price, dto.ImageUrl, dto.CategoryId);
           
 
             await _Productrepository.AddAsync(product);
