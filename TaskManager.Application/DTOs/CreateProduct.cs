@@ -18,7 +18,7 @@ namespace TaskManager.Application.DTOs
 
         public IFormFile Image { get; set; }
         public Guid CategoryId { get; set; }
-        [BindNever]
+        
         public string? ImageUrl { get; set; }
     }
 }
