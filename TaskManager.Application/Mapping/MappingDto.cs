@@ -36,7 +36,8 @@ namespace TaskManager.Application.Mappings
         Name = pro.Name,
         Price = pro.Price,
         ImageUrl = pro.ImageUrl,
-        Category = pro.Category?.Name ?? string.Empty
+        Category = pro.Category?.Name ?? string.Empty,
+        Description=pro.Description ?? string.Empty,
         
 
 

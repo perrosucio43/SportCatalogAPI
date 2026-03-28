@@ -114,9 +114,9 @@ app.Urls.Add($"http://*:{port}");
     app.UseSwaggerUI();
 
 
-app.UseHttpsRedirection();
-app.UseStaticFiles();
 app.UseCors("AllowAll");
+//app.UseHttpsRedirection();
+app.UseStaticFiles();
 app.UseAuthentication();
 app.UseAuthorization();
 
